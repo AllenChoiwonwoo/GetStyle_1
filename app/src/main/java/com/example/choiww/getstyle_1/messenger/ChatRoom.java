@@ -184,6 +184,7 @@ public class ChatRoom extends AppCompatActivity {
                     chattingAdapter.arrayList.add(messageData);// 서비스에서 받은 메시지를 화면에 더해서 보여준다.
                     chattingAdapter.notifyDataSetChanged();
                 }
+                // git test
             };
     public String convertMessageToJson(String userinputMessage, int messageType){
         // 메시지 보내기 요청보낼 데이터를 직렬화한다.

@@ -67,6 +67,7 @@ public class ChatRoomList extends AppCompatActivity {
         };
         TextView chatRoomList_goJoinChatRoomList_tv = findViewById(R.id.chatRoomList_goJoinChatRoomList_tv);
         chatRoomList_goJoinChatRoomList_tv.setOnClickListener(onClickListener);
+        // 주석하나 추가
 
         // 서버와 소통할 수 있는 서비스와 연결(bind)시킨다.
         Intent service = new Intent(this, TCP_ClientChatting_service.class);
