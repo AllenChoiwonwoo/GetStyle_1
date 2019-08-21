@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminMode.OrderManagingActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout14"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:background="@color/common_google_signin_btn_text_dark_disabled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주문관리"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView113"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="주문상태"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout14" />
+
+    <Button
+        android:id="@+id/orderManaging_filteringAll_btn"
+        android:layout_width="53dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:text="전체"
+        app:layout_constraintBottom_toBottomOf="@+id/orderManaging_filteringNotPayed_btn"
+        app:layout_constraintStart_toEndOf="@+id/textView113"
+        app:layout_constraintTop_toTopOf="@+id/orderManaging_filteringNotPayed_btn" />
+
+    <Button
+        android:id="@+id/orderManaging_filteringNotPayed_btn"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:text="입금전"
+        app:layout_constraintBottom_toBottomOf="@+id/orderManaging_filteringPayComplite_btn"
+        app:layout_constraintStart_toEndOf="@+id/orderManaging_filteringAll_btn"
+        app:layout_constraintTop_toTopOf="@+id/orderManaging_filteringPayComplite_btn" />
+
+    <Button
+        android:id="@+id/orderManaging_filteringPayComplite_btn"
+        android:layout_width="79dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:text="결제완료"
+        app:layout_constraintBottom_toBottomOf="@+id/button8"
+        app:layout_constraintStart_toEndOf="@+id/orderManaging_filteringNotPayed_btn"
+        app:layout_constraintTop_toTopOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="78dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:text="주문취소"
+        app:layout_constraintBottom_toBottomOf="@+id/textView113"
+        app:layout_constraintStart_toEndOf="@+id/orderManaging_filteringPayComplite_btn"
+        app:layout_constraintTop_toTopOf="@+id/textView113" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/orderManaging_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView113"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>

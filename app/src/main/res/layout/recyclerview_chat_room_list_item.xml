@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatRoomListItem_constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/chatRoomListItem_profile_img"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/grouptalkprofile3" />
+
+    <TextView
+        android:id="@+id/chatRoomListItem_roomName_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="채팅방 이름"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintStart_toEndOf="@+id/chatRoomListItem_profile_img"
+        app:layout_constraintTop_toTopOf="@+id/chatRoomListItem_profile_img" />
+
+    <TextView
+        android:id="@+id/chatRoomListItem_lastMessage_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="마지막 채팅내용"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chatRoomListItem_profile_img"
+        app:layout_constraintStart_toEndOf="@+id/chatRoomListItem_profile_img" />
+
+    <TextView
+        android:id="@+id/chatRoomListItem_lastMessageTime_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="메시지시간"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chatRoomListItem_joinUserVolume_tv" />
+
+    <TextView
+        android:id="@+id/chatRoomListItem_joinUserVolume_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="n명 참여"
+        app:layout_constraintStart_toEndOf="@+id/chatRoomListItem_roomName_tv"
+        app:layout_constraintTop_toTopOf="@+id/chatRoomListItem_roomName_tv" />
+
+    <TextView
+        android:id="@+id/chatRoomListItem_notReadMessageCount_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="n개"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chatRoomListItem_lastMessage_tv"
+        app:layout_constraintEnd_toEndOf="parent" />
+</android.support.constraint.ConstraintLayout>

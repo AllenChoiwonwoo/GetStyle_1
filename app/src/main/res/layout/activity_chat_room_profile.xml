@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".messenger.ChatRoomProfile">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/chatRoomProfile_profileImg_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/grouptalkprofile2" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@color/common_google_signin_btn_text_light_focused" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="오픈채팅"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.647" />
+
+    <TextView
+        android:id="@+id/chatRoomProfile_roomName_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="패션지식공유"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView106"
+        app:layout_constraintTop_toBottomOf="@+id/textView106" />
+
+    <TextView
+        android:id="@+id/textView108"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="방장"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/chatRoomProfile_maxUserAndCreatedDate_tv"
+        app:layout_constraintStart_toEndOf="@+id/chatRoomProfile_certainsProfileImg_img" />
+
+    <ImageView
+        android:id="@+id/chatRoomProfile_certainsProfileImg_img"
+        android:layout_width="61dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/chatRoomProfile_roomName_tv"
+        app:layout_constraintTop_toBottomOf="@+id/chatRoomProfile_roomName_tv"
+        app:srcCompat="@drawable/user_profile4" />
+
+    <TextView
+        android:id="@+id/chatRoomProfile_maxUserAndCreatedDate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="231/300명 | 개설일 2016. 10. 18."
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chatRoomProfile_certainsProfileImg_img"
+        app:layout_constraintStart_toEndOf="@+id/chatRoomProfile_certainsProfileImg_img" />
+
+    <TextView
+        android:id="@+id/chatRoomProfile_chatRoomTages_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="8dp"
+        android:text="#패션 #빈티지 #아마카지빈티지 #빈골즈"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/chatRoomProfile_certainsProfileImg_img"
+        app:layout_constraintTop_toBottomOf="@+id/chatRoomProfile_maxUserAndCreatedDate_tv" />
+
+    <Button
+        android:id="@+id/chatRoomProfile_joinChatRoom_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:text="채팅방 참여하기"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/mallAdminitem_mallName_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="쇼핑몰a"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mallAdminitem_mallOrder_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="순서"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mallAdminitem_mallName_tx"
+        app:layout_constraintEnd_toStartOf="@+id/mallAdminitem_mallOrderEdit_ex"
+        app:layout_constraintTop_toTopOf="@+id/mallAdminitem_mallName_tx" />
+
+    <Button
+        android:id="@+id/mallAdminitem_HideOrVisibleButton_btn"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="61dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="16dp"
+        android:text="숨기기or보이기"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/mallAdminitem_mallOrderEdit_ex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mallAdminitem_mallOrderEdit_ex" />
+
+    <EditText
+        android:id="@+id/mallAdminitem_mallOrderEdit_ex"
+        android:layout_width="56dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="순서"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/mallAdminitem_mallOrder_tx"
+        app:layout_constraintEnd_toStartOf="@+id/mallAdminitem_HideOrVisibleButton_btn"
+        app:layout_constraintTop_toTopOf="@+id/mallAdminitem_mallOrder_tx" />
+
+    <Button
+        android:id="@+id/mallAdminitem_showHideMall_btn"
+        android:layout_width="67dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="8dp"
+        android:text="보이기"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/mallAdminitem_mallName_tx"
+        app:layout_constraintEnd_toStartOf="@+id/mallAdminitem_mallOrder_tx"
+        app:layout_constraintTop_toTopOf="@+id/mallAdminitem_mallName_tx" />
+
+</android.support.constraint.ConstraintLayout>

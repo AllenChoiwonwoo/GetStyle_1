@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".messenger.ChatRoomList">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout18"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/common_google_signin_btn_text_light_disabled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView130"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="채팅"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView145"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="chat room list"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView130"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/chatRoomList_findNewChatRoom_img"
+            android:layout_width="34dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/chatRoomList_makeNewChatRoom_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_search_black_24dp" />
+
+        <ImageView
+            android:id="@+id/chatRoomList_makeNewChatRoom_img"
+            android:layout_width="37dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_queue_black_24dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chatRoomList_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatRoomList_goJoinChatRoomList_tv" />
+
+    <TextView
+        android:id="@+id/chatRoomList_goJoinChatRoomList_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="참여채팅방"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/chatRoomList_goAllChatRoomList_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout18" />
+
+    <TextView
+        android:id="@+id/chatRoomList_goAllChatRoomList_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="전채목록"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chatRoomList_goJoinChatRoomList_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/chatRoomList_goJoinChatRoomList_tv"
+        app:layout_constraintTop_toTopOf="@+id/chatRoomList_goJoinChatRoomList_tv" />
+
+</android.support.constraint.ConstraintLayout>

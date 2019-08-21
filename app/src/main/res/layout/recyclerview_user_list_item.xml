@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/userListItem_name_tv"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="이름"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/userListItem_userId_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userListItem_userId_tv"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="아이디"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/userListItem_name_tv"
+        app:layout_constraintEnd_toStartOf="@+id/userListItem_nickName_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/userListItem_name_tv"
+        app:layout_constraintTop_toTopOf="@+id/userListItem_name_tv" />
+
+    <TextView
+        android:id="@+id/userListItem_nickName_tv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="닉네임"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/userListItem_userId_tv"
+        app:layout_constraintEnd_toStartOf="@+id/userListItem_goUserDetail_img"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/userListItem_userId_tv"
+        app:layout_constraintTop_toTopOf="@+id/userListItem_userId_tv" />
+
+    <ImageView
+        android:id="@+id/userListItem_goUserDetail_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/userListItem_nickName_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/userListItem_nickName_tv"
+        app:layout_constraintTop_toTopOf="@+id/userListItem_nickName_tv"
+        app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+</android.support.constraint.ConstraintLayout>

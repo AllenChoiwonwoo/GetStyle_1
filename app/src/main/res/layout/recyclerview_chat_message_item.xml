@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/chatItem_profileImg_img"
+        android:layout_width="50dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_profile3" />
+
+    <TextView
+        android:id="@+id/chatItem_nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="이름(닉니임)"
+        app:layout_constraintStart_toEndOf="@+id/chatItem_profileImg_img"
+        app:layout_constraintTop_toTopOf="@+id/chatItem_profileImg_img" />
+
+    <ImageView
+        android:id="@+id/chatItem_image_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatItem_nickname_tv"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_disabled" />
+
+    <TextView
+        android:id="@+id/chatItem_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="시간.부분"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout17" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:maxWidth="270dp"
+        app:layout_constraintEnd_toStartOf="@+id/chatItem_time_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatItem_nickname_tv">
+
+        <TextView
+            android:id="@+id/chatItem_message_tv"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/chatItem_message2_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="TextView"
+            android:textAlignment="viewEnd"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatItem_message_tv" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

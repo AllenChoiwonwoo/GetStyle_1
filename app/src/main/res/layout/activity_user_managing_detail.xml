@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminMode.UserManagingDetailActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout16"
+        android:layout_width="411dp"
+        android:layout_height="43dp"
+        android:background="@color/common_google_signin_btn_text_dark_disabled">
+
+        <TextView
+            android:id="@+id/textView121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원상세"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView122"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:text="아이디"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout16" />
+
+    <TextView
+        android:id="@+id/textView123"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="이름"
+        app:layout_constraintStart_toStartOf="@+id/textView122"
+        app:layout_constraintTop_toBottomOf="@+id/textView122" />
+
+    <TextView
+        android:id="@+id/textView124"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="닉네임"
+        app:layout_constraintStart_toStartOf="@+id/textView123"
+        app:layout_constraintTop_toBottomOf="@+id/textView123" />
+
+    <TextView
+        android:id="@+id/textView125"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="가입일"
+        app:layout_constraintStart_toStartOf="@+id/textView124"
+        app:layout_constraintTop_toBottomOf="@+id/textView124" />
+
+    <TextView
+        android:id="@+id/textView126"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="주문개수"
+        app:layout_constraintStart_toStartOf="@+id/textView125"
+        app:layout_constraintTop_toBottomOf="@+id/textView125" />
+
+    <TextView
+        android:id="@+id/textView127"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="주문금액"
+        app:layout_constraintStart_toStartOf="@+id/textView126"
+        app:layout_constraintTop_toBottomOf="@+id/textView126" />
+
+    <TextView
+        android:id="@+id/textView128"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="접속제한시키기"
+        app:layout_constraintStart_toStartOf="@+id/textView137"
+        app:layout_constraintTop_toBottomOf="@+id/textView137" />
+
+    <TextView
+        android:id="@+id/textView129"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginTop="24dp"
+        android:text="탈퇴시키기"
+        app:layout_constraintStart_toStartOf="@+id/textView128"
+        app:layout_constraintTop_toBottomOf="@+id/textView128" />
+
+    <TextView
+        android:id="@+id/userManagingDetail_userEmail_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="id"
+        app:layout_constraintStart_toEndOf="@+id/textView122"
+        app:layout_constraintTop_toTopOf="@+id/textView122" />
+
+    <TextView
+        android:id="@+id/userManagingDetail_userName_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name"
+        app:layout_constraintStart_toStartOf="@+id/userManagingDetail_userEmail_tx"
+        app:layout_constraintTop_toTopOf="@+id/textView123" />
+
+    <TextView
+        android:id="@+id/userManagingDetail_userNickname_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nickname"
+        app:layout_constraintStart_toStartOf="@+id/userManagingDetail_userName_tx"
+        app:layout_constraintTop_toTopOf="@+id/textView124" />
+
+    <TextView
+        android:id="@+id/userManagingDetail_joinDate_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:text="joinDate"
+        app:layout_constraintStart_toStartOf="@+id/userManagingDetail_userNickname_tx"
+        app:layout_constraintTop_toTopOf="@+id/textView125" />
+
+    <TextView
+        android:id="@+id/userManagingDetail_tatalNumberOfOrders_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tatalNumberOfOrders"
+        app:layout_constraintStart_toStartOf="@+id/userManagingDetail_joinDate_tx"
+        app:layout_constraintTop_toTopOf="@+id/textView126" />
+
+    <TextView
+        android:id="@+id/userManagingDetail_totalOrderAmount_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="totalOrderAmount"
+        app:layout_constraintStart_toStartOf="@+id/userManagingDetail_tatalNumberOfOrders_tx"
+        app:layout_constraintTop_toTopOf="@+id/textView127" />
+
+    <TextView
+        android:id="@+id/textView137"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="회원등급"
+        app:layout_constraintStart_toStartOf="@+id/textView127"
+        app:layout_constraintTop_toBottomOf="@+id/textView127" />
+
+    <TextView
+        android:id="@+id/userManagingDetail_userStatus_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="userStatus"
+        app:layout_constraintStart_toStartOf="@+id/userManagingDetail_totalOrderAmount_tx"
+        app:layout_constraintTop_toTopOf="@+id/textView137" />
+
+    <Button
+        android:id="@+id/userManagingDetail_accessRestriction_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:text="접속제한"
+        app:layout_constraintBottom_toBottomOf="@+id/textView128"
+        app:layout_constraintStart_toStartOf="@+id/userManagingDetail_userStatus_tx"
+        app:layout_constraintTop_toTopOf="@+id/textView128" />
+
+    <Button
+        android:id="@+id/userManagingDetail_doWithdrawal_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:text="탈퇴시키기"
+        app:layout_constraintBottom_toBottomOf="@+id/textView129"
+        app:layout_constraintStart_toStartOf="@+id/userManagingDetail_accessRestriction_btn"
+        app:layout_constraintTop_toTopOf="@+id/textView129" />
+
+    <TextView
+        android:id="@+id/textView139"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 원"
+        app:layout_constraintStart_toEndOf="@+id/userManagingDetail_totalOrderAmount_tx"
+        app:layout_constraintTop_toTopOf="@+id/userManagingDetail_totalOrderAmount_tx" />
+
+</android.support.constraint.ConstraintLayout>

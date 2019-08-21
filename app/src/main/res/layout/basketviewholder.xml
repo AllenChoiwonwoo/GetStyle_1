@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_forBasket"
+        android:layout_width="106dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectCheckBox__forBasket"
+        tools:srcCompat="@tools:sample/avatars[0]" />
+
+    <CheckBox
+        android:id="@+id/selectCheckBox__forBasket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/delete_forBasket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="삭제"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/order_forBasket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="주문하기"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/likes_forBasket"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_forBasket" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="186dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toEndOf="@+id/img_forBasket"
+        app:layout_constraintTop_toTopOf="@+id/img_forBasket">
+
+        <TextView
+            android:id="@+id/mallName_forBasket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="쇼핑몰"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/img_forBasket"
+            app:layout_constraintTop_toTopOf="@+id/img_forBasket" />
+
+        <TextView
+            android:id="@+id/prodName_forBasket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="사품 이름"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/mallName_forBasket"
+            tools:layout_editor_absoluteY="75dp" />
+
+        <TextView
+            android:id="@+id/price_forBasket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="상품가격"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/prodName_forBasket"
+            app:layout_constraintTop_toBottomOf="@+id/prodName_forBasket" />
+
+        <TextView
+            android:id="@+id/count_forBasket"
+            android:layout_width="42dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="3dp"
+            android:text="수량"
+            app:layout_constraintStart_toStartOf="@+id/price_forBasket"
+            app:layout_constraintTop_toBottomOf="@+id/price_forBasket" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/likes_forBasket"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:text="관심상품"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/delete_forBasket"
+        app:layout_constraintStart_toEndOf="@+id/delete_forBasket" />
+
+    <TextView
+        android:id="@+id/text_soldOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="SOLD OUT"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="@+id/selectCheckBox__forBasket"
+        app:layout_constraintStart_toEndOf="@+id/selectCheckBox__forBasket"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sendItem_text"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:text="쇼핑몰 장바구니에 담기"
+        app:layout_constraintStart_toEndOf="@+id/likes_forBasket"
+        app:layout_constraintTop_toTopOf="@+id/likes_forBasket" />
+
+</android.support.constraint.ConstraintLayout>

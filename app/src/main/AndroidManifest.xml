@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.choiww.getstyle_1">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".main" />
+        <activity
+            android:name=".Main3Activity"
+            android:label="@string/title_activity_main3" />
+        <activity android:name=".webViewActivity" />
+        <activity android:name=".login" />
+        <activity android:name=".join" />
+        <activity android:name=".BasketActivity" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--
+        <service
+            android:name=".MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <activity android:name=".BasketFilteredByMallActivity" />
+        <activity android:name=".BasketOneMallProducts" />
+        <activity android:name=".MyPageActivity" />
+        <activity android:name=".OrdorActivity" />
+        <activity android:name=".OrderCompleteActivity" />
+        <activity android:name=".OrderHistroyActivity" />
+        <activity android:name=".OrderHistoryDetailActivity" />
+        <activity android:name=".deliveryTarckingActivity" />
+        <activity android:name=".messenger.Messenger_chatRoomList" />
+        <activity android:name=".messenger.SearchChatRoom" />
+        <activity android:name=".messenger.ChatRoom" />
+        <activity android:name=".messenger.ChatRoomList" />
+        <activity android:name=".messenger.JoiningChatRoomList" />
+        <activity android:name=".messenger.ChatRoomProfile" />
+        <activity android:name=".messenger.UserProfile" />
+        <activity android:name=".AdminMode.AdminPageActivity" />
+        <activity android:name=".AdminMode.MallAdminActivity" />
+        <activity android:name=".AdminMode.AffiliateMallAdminActivity" />
+        <activity android:name=".AdminMode.HideAffiliateMallAdminActivity" />
+        <activity android:name=".AdminMode.OrderManagingActivity" />
+        <activity android:name=".AdminMode.UserManagingActivity" />
+        <activity android:name=".AdminMode.UserManagingDetailActivity" />
+
+        <service
+            android:name=".messenger.TCP_ClientChatting_service"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".messenger.MakeNewChatRoom_Activity"></activity>
+    </application>
+
+</manifest>

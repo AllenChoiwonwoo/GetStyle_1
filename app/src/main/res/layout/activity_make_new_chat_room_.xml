@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".messenger.MakeNewChatRoom_Activity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/textView141"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:text="오픈채팅방 이름을 입력하세요"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView146" />
+
+    <EditText
+        android:id="@+id/makeNewChatRoom_inputRoomName_et"
+        android:layout_width="259dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="20자 이하"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textView141"
+        app:layout_constraintStart_toStartOf="@+id/textView141"
+        app:layout_constraintTop_toBottomOf="@+id/textView141" />
+
+    <TextView
+        android:id="@+id/textView142"
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="#해시태그를 이용해서 채팅방을 소개해보세요"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/makeNewChatRoom_inputRoomName_et" />
+
+    <EditText
+        android:id="@+id/makeNewChatRoom_InputHashtags_et"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="#포함 50자 이하"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textView142"
+        app:layout_constraintStart_toStartOf="@+id/textView142"
+        app:layout_constraintTop_toBottomOf="@+id/textView142" />
+
+    <TextView
+        android:id="@+id/textView143"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginTop="20dp"
+        android:text="커버 이미지 설정"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/makeNewChatRoom_inputjoinLimitNumb_et" />
+
+    <TextView
+        android:id="@+id/makeNewChatRoom_selectImgInGallery_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="앨범에서 선택"
+        app:layout_constraintEnd_toStartOf="@+id/makeNewChatRoom_defaultImg_tx"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView143" />
+
+    <TextView
+        android:id="@+id/makeNewChatRoom_defaultImg_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="기본이미지"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/makeNewChatRoom_selectImgInGallery_tx"
+        app:layout_constraintTop_toBottomOf="@+id/textView143" />
+
+    <Button
+        android:id="@+id/makeNewChatRoom_makeChatRoom_btn"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:text="채팅방 생성하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView146"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="그룹채팅"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView147"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="참여가능 인원"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/makeNewChatRoom_InputHashtags_et" />
+
+    <EditText
+        android:id="@+id/makeNewChatRoom_inputjoinLimitNumb_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="숫자만 입력"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/textView147"
+        app:layout_constraintStart_toStartOf="@+id/textView147"
+        app:layout_constraintTop_toBottomOf="@+id/textView147" />
+
+</android.support.constraint.ConstraintLayout>

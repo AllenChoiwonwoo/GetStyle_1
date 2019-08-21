@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/mallLogo_img"
+        android:layout_width="178dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/mallUpdateInfo_tx"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/getstylelog" />
+
+    <TextView
+        android:id="@+id/mallUpdateInfo_tx"
+        android:layout_width="145dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:text="n개 업데이트 됨 (2019-06-05)"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/mallLogo_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mallLogo_img"
+        app:layout_constraintTop_toTopOf="@+id/mallLogo_img" />
+
+</android.support.constraint.ConstraintLayout>
