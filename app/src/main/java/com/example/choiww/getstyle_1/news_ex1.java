@@ -58,6 +58,7 @@ public interface news_ex1 {
     //어떤 데이터를 보내서 받아야할까?
 
 //        @GET("test/json.php") Call<String> sendJson(@Body dataclass_1 body);
+        // 장바구니에 넣어놓은 상품이 품절 되었는지를 확인하는 메서드
         @FormUrlEncoded
     @POST("api/checkBasketItems.php")
 //    @POST로 하니까 서버에서 데이터를 못받았는데 .. get으로 하니까 보내진다..
@@ -185,9 +186,15 @@ public interface news_ex1 {
 //                .client(okHttpClient)
 //                .addConverterFactory(GsonConverterFactory.create());
 //
+    OkHttpClient okHttpClient = new OkHttpClient.Builder()
+        .connectTimeout(5, TimeUnit.MINUTES)
+        .readTimeout(150, TimeUnit.SECONDS)
+        .writeTimeout(150, TimeUnit.SECONDS)
+        .build();
 
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(API_URL)
+            .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 }

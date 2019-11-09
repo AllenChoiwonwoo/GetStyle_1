@@ -3,6 +3,7 @@ package com.example.choiww.getstyle_1;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -76,6 +77,8 @@ public class main extends AppCompatActivity {
     public static String userNickname;
     ViewPager vp;
 
+    TextView main_AllProducts_tv;
+    TextView main_mallProducts_tv;
 
 
     private TextView mTextMessage;
@@ -135,11 +138,13 @@ public class main extends AppCompatActivity {
         textView.setMovementMethod(new ScrollingMovementMethod());
 
         vp = findViewById(R.id.mainViewpager);
-        TextView main_AllProducts_tv = findViewById(R.id.main_AllProducts_tv);
-        TextView main_mallProducts_tv = findViewById(R.id.main_MallProducts_tv);
+        main_AllProducts_tv = findViewById(R.id.main_AllProducts_tv); // 전체버튼 - 전체 상품 프레그 먼트를 보는 버튼
+        main_mallProducts_tv = findViewById(R.id.main_MallProducts_tv);// 쇼핑몰버튼 - 쇼핑몰별 업데이트를 볼 수 있는 프레그 먼트로 가는 버튼
 
         vp.setAdapter(new pagerAdapter(getSupportFragmentManager()));
         vp.setCurrentItem(0);
+        main_AllProducts_tv.setTypeface(null, Typeface.BOLD);
+        main_mallProducts_tv.setTypeface(null, Typeface.NORMAL);
 
         main_AllProducts_tv.setOnClickListener(movePageListener);
         main_AllProducts_tv.setTag(0);
@@ -318,6 +323,14 @@ public class main extends AppCompatActivity {
         public void onClick(View v) {
             int tag = (int)v.getTag();
             vp.setCurrentItem(tag);
+            Log.d(TAG, "onClick: main - tag : "+tag);
+            if (tag == 0 ){ // '전체'버튼을 눌렀을때
+                main_AllProducts_tv.setTypeface(null, Typeface.BOLD);
+                main_mallProducts_tv.setTypeface(null, Typeface.NORMAL);
+            }else{ // '쇼핑몰' 버튼을 눌렀을때
+                main_AllProducts_tv.setTypeface(null, Typeface.NORMAL);
+                main_mallProducts_tv.setTypeface(null, Typeface.BOLD);
+            }
         }
     };
 

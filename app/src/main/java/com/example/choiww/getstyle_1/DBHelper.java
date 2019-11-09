@@ -48,6 +48,16 @@ public class DBHelper extends SQLiteOpenHelper {
     public DBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version){
         super(context, name, factory, version);
         this.context = context;
+        SQLiteDatabase db = getWritableDatabase();
+        int db_version = db.getVersion();
+        Log.d(TAG, "DBHelper: 데이터 베이스의 버전은 (getVersion) = "+db_version);
+
+        // 이상한 업데이트와 함께 sqlite의 데이터가 다 날라가서 db 가 초기화 되어 onCreate만 발동된상태이다
+        // 즉 upGrade 메서드가 실행이 안되어 있는 상태여서 나중에 추가한 컬럼들이 없어 에러가 난다.
+        // 하지만 현제 upGragde 메서드를 발동시키는 방법을 정화게 알 수 없다.
+        // 그래서 컬럼이 없다면 에러가 나니 그 에러를 발생시켜 예외처리를 통해 upGrade 메서드가 발동되게 해야겠다.
+        // -> 아니면 SQLite 용 예제를 다시 만들어서 해보는게 좋을 수 도 있겠다.
+
     }
     /** * Database가 존재하지 않을 때, 딱 한번 실행된다.
      * DB를 만드는 역할을 한다.
@@ -97,7 +107,18 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // 테이블이 업데이트 될 시 적용시켜주는 메서드
-        if (oldVersion == 1 && newVersion ==2){
+//        if (oldVersion == 1 && newVersion ==2){
+//            Log.d(TAG, "onUpgrade: 버전올리기를 시작");
+//            StringBuffer sb = new StringBuffer();
+//            sb.append(" ALTER TABLE BASKET ADD prodName VARCHAR ");
+//            db.execSQL(sb.toString());
+//            StringBuffer sb2 = new StringBuffer();
+//            sb2.append(" ALTER TABLE BASKET ADD prodHref VARCHAR ");
+//            db.execSQL(sb2.toString());
+//                    //하나의 쿼리로 2개의 컬럼의 추가하려다가 잘 안되어 하나씩 2번작업함
+//
+//        }
+        if (newVersion <=2 && newVersion <4){
             Log.d(TAG, "onUpgrade: 버전올리기를 시작");
             StringBuffer sb = new StringBuffer();
             sb.append(" ALTER TABLE BASKET ADD prodName VARCHAR ");
@@ -105,11 +126,9 @@ public class DBHelper extends SQLiteOpenHelper {
             StringBuffer sb2 = new StringBuffer();
             sb2.append(" ALTER TABLE BASKET ADD prodHref VARCHAR ");
             db.execSQL(sb2.toString());
-                    //하나의 쿼리로 2개의 컬럼의 추가하려다가 잘 안되어 하나씩 2번작업함
+            //하나의 쿼리로 2개의 컬럼의 추가하려다가 잘 안되어 하나씩 2번작업함
 
-        }
-        if (oldVersion ==2 && newVersion == 3){
-            StringBuffer sb = new StringBuffer();
+            sb = new StringBuffer();
             sb.append(" CREATE TABLE orderHistory ( ");
             sb.append(" numb INTEGER PRIMARY KEY AUTOINCREMENT, "); //index
             sb.append(" userId INTEGER, "); // 회원번호
@@ -138,7 +157,39 @@ public class DBHelper extends SQLiteOpenHelper {
             db.execSQL(sb.toString());
             Log.d(TAG, "onUpgrade: db에 새로운 테이블을 추가하였습니다.");
 
-        }
+
+        }// sqlite 가 업데이트 안되서 장바구니를 사용할 수 없는 문제를 해결하기 위해
+//        if (oldVersion ==2 && newVersion == 3){
+//            StringBuffer sb = new StringBuffer();
+//            sb.append(" CREATE TABLE orderHistory ( ");
+//            sb.append(" numb INTEGER PRIMARY KEY AUTOINCREMENT, "); //index
+//            sb.append(" userId INTEGER, "); // 회원번호
+//            sb.append(" userEmail VARCHAR, ");  // 회원아이디(이메일)
+//            sb.append(" products_json TEXT, "); // json화 된 구매상품정보들
+//            sb.append(" orderNumb VARCHAR, ");  // 주문번호
+//            sb.append(" orderDate DATETIME, "); // 주문일자
+//            sb.append(" buyer VARCHAR, ");      // 구매자
+//            sb.append(" orderState VARCHAR, "); //  주문상태(임금전,배송준비중,배송중,배송완료)
+//            sb.append(" productsPrice INTEGER, ");  // 상품들 가격의 합
+//            sb.append(" saleDiscount INTEGER, ");   // 할인금액의 합
+//            sb.append(" billedPoint INTEGER, ");    // 사용한 포인트
+//            sb.append(" deliveryCharge INTEGER, "); // 배송비
+//            sb.append(" finalBill INTEGER, ");      // 총 결제금액
+//            sb.append(" paymentMethod VARCHAR, ");  // 지불방식
+//            sb.append(" depositor VARCHAR, ");      // 입금자명
+//            sb.append(" accountNumb VARCHAR, ");    // 입금계좌번호, 은행
+//            sb.append(" payDay DATETIME, ");        // 입금기한
+//            sb.append(" receiverName VARCHAR, ");   // 받는사람
+//            sb.append(" receiverAddress VARCHAR, ");// 받는이 주소
+//            sb.append(" receiverCallNumb VARCHAR, ");// 받는이 집전화
+//            sb.append(" receiverCellphone VARCHAR, ");// 받는이 핸드폰
+//            sb.append(" createdDate DATETIME, "); // 생성날짜
+//            sb.append(" modifiedDate DATETIME ) ");   // 수정날짜
+//
+//            db.execSQL(sb.toString());
+//            Log.d(TAG, "onUpgrade: db에 새로운 테이블을 추가하였습니다.");
+//
+//        }
         if (oldVersion ==3 && newVersion == 4){
             // 배송메시지, 운송장번호를 넣는 col이 필요하다.
             // 입금 상태는 있지만 서버에서 받아와야한다.
@@ -152,6 +203,8 @@ public class DBHelper extends SQLiteOpenHelper {
         // 장바구니에 상품 추가시 사용하는 메서드
 //        1. 쓸 수 있는 DB객체를 가져온다.
         SQLiteDatabase db = getWritableDatabase();
+
+
 
 //        2. itemInfo 를 insert한다.
 //        _id는 자동으로 증가하기 때문에 넣지 않습니다.

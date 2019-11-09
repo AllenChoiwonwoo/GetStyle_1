@@ -32,17 +32,21 @@ public class Adapter_ChatRoomRecyclerview extends RecyclerView.Adapter<Adapter_C
     Intent intent;
     String TAG = "find";
     boolean isChatRoomList = false;
+    Context mcontext;
 
-    public Adapter_ChatRoomRecyclerview(ArrayList list, JoiningChatRoomList jcrl, Intent intent){
+
+    public Adapter_ChatRoomRecyclerview(Context mcontext, ArrayList list, JoiningChatRoomList jcrl, Intent intent){
         this.chatRoomList = list;
         this.jcrl = jcrl;
         this.intent = intent;
+        this.mcontext = mcontext;
     }
-    public Adapter_ChatRoomRecyclerview(ArrayList list, ChatRoomList crl){
+    public Adapter_ChatRoomRecyclerview(Context mcontext, ArrayList list, ChatRoomList crl){
         this.chatRoomList = list;
         this.crl = crl;
         this.intent = intent;
         isChatRoomList = true;
+        this.mcontext = mcontext;
     }
 
     public class ChatRoomViewholder extends RecyclerView.ViewHolder{
@@ -84,8 +88,9 @@ public class Adapter_ChatRoomRecyclerview extends RecyclerView.Adapter<Adapter_C
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ChatRoomViewholder viewHolder, final int i) {
+    public void onBindViewHolder(@NonNull final ChatRoomViewholder viewHolder, final int i) {
         viewHolder.chatRoomListItem_roomName_tv.setText(chatRoomList.get(i).getRoomName());
+        Log.d(TAG, "adapter_chatRoomRV-onBindViewHolder: 이 어댑터를 통해 이미지가들어간다는것?");
         
         Log.d(TAG, "Adapter_allchatRommList_adapter - onBindViewHolder: get_numb ="+chatRoomList.get(i).getRoomNumb());
         Log.d(TAG, "onBindViewHolder: getRoomName = "+chatRoomList.get(i).getRoomName());
@@ -113,6 +118,7 @@ public class Adapter_ChatRoomRecyclerview extends RecyclerView.Adapter<Adapter_C
                     crl.tcpConn.myServiceFunc(jsonObject.toString());
 
                 }else {
+                    /*// 이코드는 기존의 joiningChatRoomList 에서 메시지들을 받아서 chatRoom으로 넘겨주는 방식이다.
                     Log.d(TAG, "onClick: 참여중채팅방리스트 보기 recyclerview에서 하나의 채팅방(아이탬)이 클릭됨");
 //                intent.putExtra("roomNumb", joinChatRoomList.get(i).get_numb());
                     JSONObject jsonObject = new JSONObject();
@@ -130,6 +136,11 @@ public class Adapter_ChatRoomRecyclerview extends RecyclerView.Adapter<Adapter_C
                         e.printStackTrace();
                     }
                     jcrl.tcpConn.myServiceFunc(jsonObject.toString());
+*/
+                    // 이건 선택한 방번호만 chatRoom으로 넘겨서 거기서 메시지를 받아오게 하는 코드이다.
+                    Intent goChatRoom_intent = new Intent(mcontext,ChatRoom.class);
+                    goChatRoom_intent.putExtra("joiningRoomNumb", chatRoomList.get(i).getRoomNumb());
+                    mcontext.startActivity(goChatRoom_intent);
                 }
 
             }

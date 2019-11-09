@@ -119,7 +119,7 @@ public class JoiningChatRoomList extends AppCompatActivity {
         bindService(service, mConnection, Context.BIND_AUTO_CREATE);
 
         joinChatRoomList_recyclerview = findViewById(R.id.joinChatRoomList_recyclerview);
-        joinChatRoomListAdapter = new Adapter_ChatRoomRecyclerview(joinChatRoomArray,this, goSelectedChatRoom_intent);
+        joinChatRoomListAdapter = new Adapter_ChatRoomRecyclerview(this,joinChatRoomArray,this, goSelectedChatRoom_intent);
         linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         joinChatRoomList_recyclerview.setLayoutManager(linearLayoutManager);
         joinChatRoomList_recyclerview.setAdapter(joinChatRoomListAdapter);
@@ -179,7 +179,8 @@ public class JoiningChatRoomList extends AppCompatActivity {
                         joinChatRoomListAdapter.notifyDataSetChanged();
                         // 이 어레이를 이제 리사이클러뷰에 넣어줘야한다.
                     }else if(message.what == 5){
-                        Log.d(TAG, "joiningChatRoomList-remoteCall: 서비스를 통해 서버에서 보낸 유저가 클릭한 채팅방의 전체 채팅메시지를 받음");
+                        Log.d(TAG, "remoteCall: 이건 모든 메시지 불러오기 전코드라 작동하면 안됌");
+//                        Log.d(TAG, "joiningChatRoomList-remoteCall: 서비스를 통해 서버에서 보낸 유저가 클릭한 채팅방의 전체 채팅메시지를 받음");
                         List<Messages_dataClass> messageList = (List<Messages_dataClass>)message.obj;
                         ArrayList<Messages_dataClass> arrayList = new ArrayList<>();
                         arrayList.addAll(messageList);
@@ -187,10 +188,10 @@ public class JoiningChatRoomList extends AppCompatActivity {
 //                        bundle.putParcelable("messageList",message);
 //                        goSelectedChatRoom_intent.putExtra("messageList", message);
 //                        goSelectedChatRoom_intent.putExtras(bundle);
-
-                        goSelectedChatRoom_intent.putParcelableArrayListExtra("messageList", arrayList);
-                        goSelectedChatRoom_intent.putExtra("roomNumb", message.arg1+"");
-                        startActivity(goSelectedChatRoom_intent);
+//
+//                        goSelectedChatRoom_intent.putParcelableArrayListExtra(this, "messageList", arrayList);
+//                        goSelectedChatRoom_intent.putExtra("roomNumb", message.arg1+"");
+//                        startActivity(goSelectedChatRoom_intent);
                     }
 
 

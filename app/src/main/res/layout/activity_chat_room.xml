@@ -70,7 +70,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView15"
+            android:id="@+id/chatRoom_sendImgBtm_img"
             android:layout_width="32dp"
             android:layout_height="30dp"
             android:layout_marginStart="8dp"
@@ -99,7 +99,7 @@
             android:inputType="textMultiLine"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/chatRoom_sendButton_img"
-            app:layout_constraintStart_toEndOf="@+id/imageView15"
+            app:layout_constraintStart_toEndOf="@+id/chatRoom_sendImgBtm_img"
             app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 

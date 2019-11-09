@@ -75,7 +75,7 @@ public class ChatRoomList extends AppCompatActivity {
 //        Re
         // 전채 채팅방의 리스트를 보여주는 recyclerview
         chatRoomList_recyclerview = findViewById(R.id.chatRoomList_recyclerview);
-        chatRoomListAdapter = new Adapter_ChatRoomRecyclerview(chatRoomArray,this);
+        chatRoomListAdapter = new Adapter_ChatRoomRecyclerview(getApplicationContext(),chatRoomArray,this);
         linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         chatRoomList_recyclerview.setLayoutManager(linearLayoutManager);
         chatRoomList_recyclerview.setAdapter(chatRoomListAdapter);

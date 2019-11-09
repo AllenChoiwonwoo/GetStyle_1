@@ -13,10 +13,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/round_view_light_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grouptalkprofile3" />
+        app:srcCompat="@drawable/ic_group_lightgreay_24dp" />
 
     <TextView
         android:id="@+id/chatRoomListItem_roomName_tv"

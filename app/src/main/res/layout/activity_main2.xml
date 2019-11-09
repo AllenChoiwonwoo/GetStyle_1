@@ -14,27 +14,33 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/navigation" />
+        app:menu="@menu/navigation" >
+
+    </android.support.design.widget.BottomNavigationView>
 
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="2dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView14">
+
+    </SearchView>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="42dp"
         android:layout_height="42dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="2dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchView"
         app:srcCompat="@android:drawable/ic_menu_search" />
 
     <TextView
@@ -87,7 +93,7 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="0dp"
-        android:layout_height="30dp"
+        android:layout_height="11dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,11 +103,27 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/mainViewpager"
-        android:layout_width="395dp"
-        android:layout_height="483dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/main_AllProducts_tv"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="245dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/getstylelog" />
 
 </android.support.constraint.ConstraintLayout>
