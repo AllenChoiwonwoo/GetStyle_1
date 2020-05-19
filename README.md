@@ -6,7 +6,8 @@
 
 ## 프로젝트 소개
 
-여러 쇼핑몰의 상품을 하나의 앱에서 볼 수 있는 앱입니다. ( Like 지그제그 )
+* 여러 쇼핑몰의 상품을 하나의 앱에서 볼 수 있는 앱입니다. ( Like 지그제그 )
+
 ![loadingPage](./screenshot/loading.PNG) ![main](./screenshot/main.PNG) ![main](./screenshot/product_detail.PNG) ![main](./screenshot/basket.PNG) ![main](./screenshot/new_product_alert.PNG) ![main](./screenshot/new_product_push_alert.PNG) ![main](./screenshot/order_page.PNG) ![main](./screenshot/chatting.PNG) ![main](./screenshot/adminpage.PNG)
 
 **기능**
