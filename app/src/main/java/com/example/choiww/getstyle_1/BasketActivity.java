@@ -36,6 +36,8 @@ import retrofit2.Response;
     * 체크리스트 :
     *   query문이 올바르게 동작해서 올바른 데이터를 불러왔는지
     *   recyclerview에 잘 들어가는지?//
+    *   add annotation
+    *   ---
     * */
 
 
